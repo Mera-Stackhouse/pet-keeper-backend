@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  birthdate: MyString
+  breed: MyString
+  habits: MyString
+  vaccination_dates: MyString
+  medications: MyString
+  appointments: MyString
+  groomings: MyString
+  user_id: MyString
+  vet_id: MyString
+
+two:
+  name: MyString
+  type: 
+  birthdate: MyString
+  breed: MyString
+  habits: MyString
+  vaccination_dates: MyString
+  medications: MyString
+  appointments: MyString
+  groomings: MyString
+  user_id: MyString
+  vet_id: MyString
