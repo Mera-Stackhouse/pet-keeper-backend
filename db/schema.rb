@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_213507) do
     t.string "name"
     t.string "species"
     t.date "birthdate"
+    t.string "gender"
     t.string "breed"
     t.string "habits"
     t.string "vaccination_dates", default: [], array: true

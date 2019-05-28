@@ -4,6 +4,7 @@ class CreatePets < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :species
       t.date :birthdate
+      t.string :gender
       t.string :breed
       t.string :habits
       t.string :vaccination_dates, array: true, default: []
