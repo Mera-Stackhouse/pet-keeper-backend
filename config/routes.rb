@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :vets
       resources :pets
-      resources :users, only: [:create]
+      resources :users, only: [:create, :update]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
     end
