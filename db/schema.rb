@@ -45,7 +45,8 @@ ActiveRecord::Schema.define(version: 2019_05_24_213507) do
     t.string "username"
     t.string "password_digest"
     t.string "avatar_url"
-    t.text "bio"
+    t.string "mobile"
+    t.string "email"
     t.string "neighborhood"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
