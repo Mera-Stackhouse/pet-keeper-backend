@@ -1,10 +1,5 @@
 class Api::V1::PetsController < ApplicationController
 
-  def index
-    @pets = Pet.all
-    render json: @pets
-  end
-
   def create
     @pet = Pet.create(pet_params)
     if @pet.valid?
@@ -12,6 +7,15 @@ class Api::V1::PetsController < ApplicationController
       render json: @user, status: :created
     else
       render json: { error: 'failed to create pet' }, status: :not_acceptable
+    end
+  end
+
+  def update
+    @pet = Pet.find(params[:id])
+    if @pet.update(pet_params)
+      render json:  {pet: @pet}, status: :accepted
+    else
+      render json: { error: 'failed to update pet' }, status: :not_acceptable
     end
   end
 
@@ -23,7 +27,7 @@ class Api::V1::PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :breed, :species, :gender, :img_url)
+    params.require(:pet).permit(:name, :breed, :species, :gender, :img_url, :habits)
   end
 
 end
