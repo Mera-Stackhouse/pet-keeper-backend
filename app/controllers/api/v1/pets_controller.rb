@@ -16,7 +16,6 @@ class Api::V1::PetsController < ApplicationController
   end
 
   def destroy
-    #create an if state if the pet doesn't exits
     @pet = Pet.find(params[:id])
     @pet.destroy
     render json: @user, status: :accepted
